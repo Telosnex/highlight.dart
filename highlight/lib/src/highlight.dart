@@ -262,6 +262,34 @@ class Highlight {
     return _parse(source, language: language);
   }
 
+  /// Parses [source] as a continuation of a previous parse, enabling
+  /// incremental highlighting of streamed or line-chunked code.
+  ///
+  /// Pass the [Result.top] returned by the previous chunk's parse as
+  /// [continuation]; the returned [Result.top] is the parser state to feed
+  /// into the next chunk. Chunks should be split at line boundaries (this is
+  /// how highlight.js implements line-by-line highlighting).
+  ///
+  /// [ignoreIllegals] defaults to `true` because streamed content routinely
+  /// ends mid-token, which would otherwise abort highlighting with an
+  /// illegal-lexeme error.
+  ///
+  /// A `null` [language] falls back to plaintext, matching [parse]'s internal
+  /// behavior for unknown languages.
+  Result parseWithContinuation(
+    String source, {
+    String? language,
+    Mode? continuation,
+    bool ignoreIllegals = true,
+  }) {
+    return _parse(
+      source,
+      language: language,
+      ignoreIllegals: ignoreIllegals,
+      continuation: continuation,
+    );
+  }
+
   Result _parse(
     String source, {
     String? language,
