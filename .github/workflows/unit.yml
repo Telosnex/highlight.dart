@@ -33,23 +33,23 @@ jobs:
           submodules: true
       - uses: Telosnex/telosnex_ci_tools/actions/setup-flutter@cba77fc0d4330f1bef81193c53cd7dd976f0ebcf # v0.5.3
       - uses: Telosnex/telosnex_ci_tools/actions/lint@cba77fc0d4330f1bef81193c53cd7dd976f0ebcf # v0.5.3
-      # Two packages: highlight (Dart) and flutter_highlight (Flutter).
+      - run: dart pub get
+        working-directory: highlight
+      - run: flutter pub get
+        working-directory: flutter_highlight
+      - run: flutter pub get
+        working-directory: flutter_highlight/example
+      # After pub get: dart format reads each package's language version.
       # Generated files (first line "// GENERATED ...") keep their generator's
       # layout; vendor/ is upstream's.
       - run: |
           git ls-files '*.dart' | grep -v '^vendor/' |
             while read -r f; do head -1 "$f" | grep -qiE '^// *generated' || echo "$f"; done |
             xargs dart format --output=none --set-exit-if-changed
-      - run: dart pub get
-        working-directory: highlight
       - run: dart analyze --fatal-infos
         working-directory: highlight
       - run: dart test -r expanded
         working-directory: highlight
-      - run: flutter pub get
-        working-directory: flutter_highlight
-      - run: flutter pub get
-        working-directory: flutter_highlight/example
       - run: flutter analyze --fatal-infos
         working-directory: flutter_highlight
       - run: flutter test -r expanded
