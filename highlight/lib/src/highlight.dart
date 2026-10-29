@@ -487,7 +487,7 @@ class Highlight {
       while (true) {
         match = top!.terminators
             ?.allMatches(source, index)
-            ?.firstWhereOrNull((m) => true);
+            .firstWhereOrNull((m) => true);
 
         if (match == null) break;
         // print(top.terminators);

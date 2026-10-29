@@ -198,7 +198,7 @@ export function allModes() {
 
       fs.writeFileSync(
         `../highlight/lib/languages/${originalLang}.dart`,
-        `${NOTICE_COMMENT}import '../src/mode.dart'; import '../src/common_modes.dart'; final ${lang}=Mode(${commonStr} ${data.slice(
+        `${NOTICE_COMMENT}// Not every language uses common_modes.\n// ignore_for_file: unused_import\n\nimport '../src/mode.dart'; import '../src/common_modes.dart'; final ${lang}=Mode(${commonStr} ${data.slice(
           5
         )};`
           .replace(/"hljs\.(.*?)"/g, "$1")
