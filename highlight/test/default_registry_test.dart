@@ -1,4 +1,4 @@
-import 'package:highlight/highlight.dart';
+import 'package:highlight_fork/highlight.dart';
 import 'package:test/test.dart';
 
 /// The default registry (lib/highlight.dart) has only the languages

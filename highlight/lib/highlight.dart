@@ -1,6 +1,6 @@
 // Local Telosnex default language registry.
 //
-// The upstream `package:highlight/highlight.dart` imports and registers every
+// The upstream `package:highlight_fork/highlight.dart` imports and registers every
 // generated language definition.  That pulls the generated 1C grammar into
 // Flutter web's main.dart.js; on iOS Safari/WebKit that grammar can fail while
 // compiling regexes during startup (`SyntaxError: \u can only be followed by a
@@ -8,50 +8,50 @@
 // renders in Markdown code fences instead of eagerly loading the full grammar
 // set.
 
-import 'package:highlight/languages/bash.dart';
-import 'package:highlight/languages/cpp.dart';
-import 'package:highlight/languages/cs.dart';
-import 'package:highlight/languages/css.dart';
-import 'package:highlight/languages/dart.dart';
-import 'package:highlight/languages/diff.dart';
-import 'package:highlight/languages/dockerfile.dart';
-import 'package:highlight/languages/go.dart';
-import 'package:highlight/languages/graphql.dart';
-import 'package:highlight/languages/http.dart';
-import 'package:highlight/languages/ini.dart';
-import 'package:highlight/languages/java.dart';
-import 'package:highlight/languages/javascript.dart';
-import 'package:highlight/languages/json.dart';
-import 'package:highlight/languages/kotlin.dart';
-import 'package:highlight/languages/lua.dart';
-import 'package:highlight/languages/makefile.dart';
-import 'package:highlight/languages/markdown.dart';
-import 'package:highlight/languages/nginx.dart';
-import 'package:highlight/languages/objectivec.dart';
-import 'package:highlight/languages/perl.dart';
-import 'package:highlight/languages/php.dart';
-import 'package:highlight/languages/plaintext.dart';
-import 'package:highlight/languages/powershell.dart';
-import 'package:highlight/languages/python.dart';
-import 'package:highlight/languages/r.dart';
-import 'package:highlight/languages/ruby.dart';
-import 'package:highlight/languages/rust.dart';
-import 'package:highlight/languages/scss.dart';
-import 'package:highlight/languages/shell.dart';
-import 'package:highlight/languages/solidity.dart';
-import 'package:highlight/languages/sql.dart';
-import 'package:highlight/languages/swift.dart';
-import 'package:highlight/languages/tex.dart';
-import 'package:highlight/languages/typescript.dart';
-import 'package:highlight/languages/vue.dart';
-import 'package:highlight/languages/xml.dart';
-import 'package:highlight/languages/yaml.dart';
-import 'package:highlight/src/highlight.dart';
+import 'package:highlight_fork/languages/bash.dart';
+import 'package:highlight_fork/languages/cpp.dart';
+import 'package:highlight_fork/languages/cs.dart';
+import 'package:highlight_fork/languages/css.dart';
+import 'package:highlight_fork/languages/dart.dart';
+import 'package:highlight_fork/languages/diff.dart';
+import 'package:highlight_fork/languages/dockerfile.dart';
+import 'package:highlight_fork/languages/go.dart';
+import 'package:highlight_fork/languages/graphql.dart';
+import 'package:highlight_fork/languages/http.dart';
+import 'package:highlight_fork/languages/ini.dart';
+import 'package:highlight_fork/languages/java.dart';
+import 'package:highlight_fork/languages/javascript.dart';
+import 'package:highlight_fork/languages/json.dart';
+import 'package:highlight_fork/languages/kotlin.dart';
+import 'package:highlight_fork/languages/lua.dart';
+import 'package:highlight_fork/languages/makefile.dart';
+import 'package:highlight_fork/languages/markdown.dart';
+import 'package:highlight_fork/languages/nginx.dart';
+import 'package:highlight_fork/languages/objectivec.dart';
+import 'package:highlight_fork/languages/perl.dart';
+import 'package:highlight_fork/languages/php.dart';
+import 'package:highlight_fork/languages/plaintext.dart';
+import 'package:highlight_fork/languages/powershell.dart';
+import 'package:highlight_fork/languages/python.dart';
+import 'package:highlight_fork/languages/r.dart';
+import 'package:highlight_fork/languages/ruby.dart';
+import 'package:highlight_fork/languages/rust.dart';
+import 'package:highlight_fork/languages/scss.dart';
+import 'package:highlight_fork/languages/shell.dart';
+import 'package:highlight_fork/languages/solidity.dart';
+import 'package:highlight_fork/languages/sql.dart';
+import 'package:highlight_fork/languages/swift.dart';
+import 'package:highlight_fork/languages/tex.dart';
+import 'package:highlight_fork/languages/typescript.dart';
+import 'package:highlight_fork/languages/vue.dart';
+import 'package:highlight_fork/languages/xml.dart';
+import 'package:highlight_fork/languages/yaml.dart';
+import 'package:highlight_fork/src/highlight.dart';
 
-export 'package:highlight/src/highlight.dart';
-export 'package:highlight/src/mode.dart';
-export 'package:highlight/src/node.dart';
-export 'package:highlight/src/result.dart';
+export 'package:highlight_fork/src/highlight.dart';
+export 'package:highlight_fork/src/mode.dart';
+export 'package:highlight_fork/src/node.dart';
+export 'package:highlight_fork/src/result.dart';
 
 final highlight = Highlight()
   ..registerLanguages({
