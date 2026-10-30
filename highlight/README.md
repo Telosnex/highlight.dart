@@ -9,7 +9,7 @@ If you are looking for Flutter widget, see [flutter_highlight](https://github.co
 ## Usage
 
 ```dart
-import 'package:highlight/highlight.dart' show highlight;
+import 'package:highlight_fork/highlight.dart' show highlight;
 
 main() {
   var source = '''main() {
@@ -26,8 +26,8 @@ main() {
 Notice that **all available languages are registered** in the way above. For those desiring more control over what exactly they need, import `highlight_core.dart` instead and register languages manually:
 
 ```dart
-import 'package:highlight/highlight_core.dart' show highlight;
-import 'package:highlight/languages/dart.dart';
+import 'package:highlight_fork/highlight_core.dart' show highlight;
+import 'package:highlight_fork/languages/dart.dart';
 
 main() {
   var source = '''main() {

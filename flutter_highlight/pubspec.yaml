@@ -10,12 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  highlight:
+  highlight_fork:
     path: ../highlight
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 # dependency_overrides:
-#   highlight:
+#   highlight_fork:
 #     path: ../highlight

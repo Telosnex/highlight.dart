@@ -1,4 +1,4 @@
-import 'package:highlight/highlight.dart' show highlight;
+import 'package:highlight_fork/highlight.dart' show highlight;
 
 void main() {
   var source = '''main() {

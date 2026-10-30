@@ -3,9 +3,9 @@
 library highlight_test;
 
 import 'dart:io';
-import 'package:highlight/languages/all.dart';
+import 'package:highlight_fork/languages/all.dart';
 import 'package:path/path.dart' as path;
-import 'package:highlight/highlight_core.dart' show highlight;
+import 'package:highlight_fork/highlight_core.dart' show highlight;
 import 'package:test/test.dart';
 
 /// Fixtures that upstream 0.7.0 already fails (its port of highlight.js
