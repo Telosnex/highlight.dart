@@ -1,3 +1,7 @@
+## 0.7.1
+
+- SDK constraint `^3.0.0` (was the Dart 2 bound `>=2.12.0 <3.0.0`).
+
 # [0.7.0](https://github.com/git-touch/highlight/compare/v0.6.0...v.7.0) (2021-03-07)
 
 ### Features
